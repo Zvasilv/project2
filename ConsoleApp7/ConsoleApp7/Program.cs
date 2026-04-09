@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("Пиши оно само решит");
 string input = Console.ReadLine();
-string[] parts = input.Split(' '); // нужно да бы  разбить пример на первое число, знак и второе число
+string[] parts = input.Split(' '); // нужно дабы разбить пример на первое число, знак и второе число
 float a = float.Parse(parts[0]); // первое число
 string znak = parts[1]; // знак
 float b = float.Parse(parts[2]); // втрое число
