@@ -1,36 +1,48 @@
 ﻿using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
 
 
 while (true)
 {
     Console.WriteLine("Напишите выражение");
-    string input = Console.ReadLine().Replace(" ", "");
-    char[] simvol = { '+', '-', '*', '/', '^' };
-    string[] parts = input.Split(simvol); // с помощью этой штуки, программа понимает, когда нужно отделить циферки от знака. Сам знак не читает. 
-    bool a = float.TryParse(parts[0], out float c); // первое число
-    bool b = float.TryParse(parts[1], out float d); // второе число
-    if (!a || !b) // Проверяет на буквы, есть - перезапуск. Нет - продолжает программу
+    string input = Console.ReadLine().Replace(" ", ""); 
+    char[] simvol = { '+', '-', '*', '/', '^' }; 
+    input.IndexOfAny(simvol); // Ищидит есть ли символы
+    int index = input.IndexOfAny(simvol);
+    if (index == -1) continue;
+    char znak = input[index];
+    string[] parts = input.Split(simvol); // с помощью этой штуки, программа понимает, когда нужно отделить циферки от знака. Сам знак не читает.
+    if (float.TryParse(parts[0], out float c) && float.TryParse(parts[1], out float d)) // Проверяет на буквы, есть - перезапуск. Нет - продолжает программу
     {
-        Console.WriteLine("Без букв"); 
-        continue;
-    }    
-    string znak = "";
-    foreach (char simvol2 in simvol) // находит знак и трансформирует его в символ.
-    {
-        if (input.Contains(simvol2))
+        float e = 0;
+        switch (znak)
         {
-            znak = simvol2.ToString();
-            break;
+            case '+':
+                e = c + d;
+                break;
+            case '-':
+                e = c - d;
+                break;
+            case '*':
+                e = c * d;
+                break;
+            case '/':
+                if (d != 0) { e = c / d; }
+                if (d == 0) 
+                { 
+                    Console.WriteLine("Деление на 0 невозможно");
+                    continue;
+                }
+                break;
+            case '^':
+                e = (float)Math.Pow(c, d);
+                break;
         }
+        Console.WriteLine($"Результат: {e}"); 
     }
-    
-    if (znak == "+") { Console.WriteLine(c + d); }
-    if (znak == "-") { Console.WriteLine(c - d); }
-    if (znak == "*") { Console.WriteLine(c * d); }
-    if (znak == "/" && d != 0) { Console.WriteLine(c / d); }
-    if (znak == "/" && d == 0) { Console.WriteLine("Деление на 0 невозможно"); }
-    if (znak == "^") Console.WriteLine(Math.Pow(c, d));
-    break;
-    
+    else 
+    {
+           Console.WriteLine("Без букв");
+           continue;
+    }      
 }
-
