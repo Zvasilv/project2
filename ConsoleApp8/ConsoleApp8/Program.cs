@@ -7,7 +7,7 @@ while (true)
     Console.WriteLine("Напишите выражение");
     string input = Console.ReadLine().Replace(" ", null); 
     char[] simvol = { '+', '-', '*', '/', '^' }; 
-    input.IndexOfAny(simvol); // Ищидит есть ли символы. Он же индекс. 
+    input.IndexOfAny(simvol); // ищет есть ли символы. Он же индекс. 
     int index = input.IndexOfAny(simvol);
     if (index == -1) continue;
     char znak = input[index];
