@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\zvasi\\.nuget\\packages\\": {},
-    "D:\\visual Studio SDK\\NuGetPackages": {}
+    "C:\\Users\\Женя\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Hello World\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj",
+      "projectUniqueName": "D:\\code1\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj",
       "projectName": "ConsoleApp8",
-      "projectPath": "D:\\Hello World\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj",
-      "packagesPath": "C:\\Users\\zvasi\\.nuget\\packages\\",
-      "outputPath": "D:\\Hello World\\ConsoleApp8\\ConsoleApp8\\obj\\",
+      "projectPath": "D:\\code1\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj",
+      "packagesPath": "C:\\Users\\Женя\\.nuget\\packages\\",
+      "outputPath": "D:\\code1\\ConsoleApp8\\ConsoleApp8\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\visual Studio SDK\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\zvasi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Женя\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
